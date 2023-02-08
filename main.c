@@ -117,12 +117,11 @@ printf("%d->NULL\n",head->next->next->next->value);
           
      */
     
-    tmp=head;
+    p=head;
     while(p!=NULL){
-    head=tmp->next;
+    tmp=p;
     printf("deleting %d\n",tmp->value);
+      p=p->next;
     free(tmp);
-    tmp=tmp->next;
-    tmp=head;
     }
     return 0;}
